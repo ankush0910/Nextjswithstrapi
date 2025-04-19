@@ -2,7 +2,7 @@
 
 export default function FeatureDisplay({ data }) {
   const { title, description, image } = data;
-  console.log("data", data?.description[0]?.children[0]?.text);
+  console.log("data", title);
   console.log("description", description?.children);
   return (
     // <div className="relative w-[300px] h-[300px] rounded-full overflow-hidden flex items-center justify-center shadow-lg">
@@ -15,7 +15,7 @@ export default function FeatureDisplay({ data }) {
 
         <div className="w-72 h-72 rounded-full overflow-hidden absolute left-36 z-0 shadow-lg">
           <img
-            src={`http://localhost:1337${image[0]?.url}`}
+            src={`https://nextjswithstrapi-production.up.railway.app${image[0]?.url}`}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover opacity-60"
           />

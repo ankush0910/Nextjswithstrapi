@@ -52,5 +52,6 @@ export default function WhyUsPage({ features }) {
 
 export async function getServerSideProps() {
   const features = await fetchWhyUsFeatures();
+  console.log("features",features)
   return { props: { features } };
 }
